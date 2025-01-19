@@ -8,7 +8,7 @@ export default function Carousel() {
             <Swiper
                 spaceBetween={30}
                 loop={true}
-                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
                 modules={[Autoplay, Pagination]}
             >
