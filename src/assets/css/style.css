@@ -1,3 +1,157 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+:root {
+    /* Color */
+    --body-color: #090717;
+    --primary-color: #0d6efd;
+    --primary-color-opacity: #0d6dfd1c;
+    --primary-color-light: #f6f5ff;
+    --card-color: #161326;
+    --sidebar-color: var(--card-color);
+    --toggle-color: #ddd;
+    --src-border-color: #707070;
+    --input-box-shadow: #257cc4;
+    --card-hover: #1b1731;
+    --nav-bottom-icon-color: #f6f5ff;
+    --bg-scroll-bar: #e4e9f7;
+    --thumb-color: #b1b1b1;
+    --thumb-hover-color: #888;
+    /* Color End */
+
+    /* Text Color */
+    --text-color: #dee2e6;
+    --text-color-muted: #707070;
+    --text-color-primary: var(--primary-color);
+    /* Text Color */
+
+    /* Transisi */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+    /* Transisi End */
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--body-color);
+}
+
+
+/* Colors */
+a {
+    color: var(--primary-color) !important;
+}
+.primary-color {
+    color: var(--primary-color) !important;
+}
+.text-color,
+label {
+    color: var(--text-color) !important;
+}
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+.bg-color {
+    background-color: var(--background-color) !important;
+}
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+.bg-modal {
+    background-color: var(--nav-color) !important;
+}
+.btn-close {
+    border-color: var(--text-color) !important;
+}
+/* Colors End */
+
+
+
+/* Text Size */
+h1 {
+    font-size: clamp(30px, 2.5vw, 35px);
+}
+h2 {
+    font-size: clamp(25px, 2.5vw, 30px);
+}
+h3 {
+    font-size: clamp(20px, 2.5vw, 25px);
+}
+h4 {
+    font-size: clamp(17px, 2.5vw, 20px);
+}
+h5 {
+    font-size: clamp(15px, 2.5vw, 17px);
+}
+h6,
+a,
+span,
+p {
+    font-size: clamp(13px, 2.5vw, 15px);
+}
+/* Text Size End */
+
+
+
+/* Navbar */
+nav {
+    background-color: #171327;
+}
+
+/* search box */
+nav .search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid var(--body-color);
+    background-color: var(--body-color);
+    padding: 10px 15px;
+    cursor: pointer;
+}
+nav .search-box input {
+    width: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color);
+}
+nav .search-box input::placeholder,
+nav .search-box i {
+    color: var(--text-color-muted);
+}
+nav .search-box:focus-within,
+nav .search-box:focus-within i {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+nav .search-box.active input {
+    width: 100%;
+    padding: 0px 10px;
+    transition: var(--tran-05);
+}
+
+@media (max-width: 576px) {
+    nav .logo.active {
+        display: none;
+    }
+    nav .search-box.active {
+        width: 100%;
+        transition: var(--tran-03);
+    }
+}
+/* Navbar End */

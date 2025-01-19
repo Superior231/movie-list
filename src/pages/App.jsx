@@ -1,9 +1,11 @@
+import '../input.css'
 import '../assets/css/style.css'
+import Navbar from '../components/navbar'
 
 function App() {
   return (
     <>
-      <h1>Hallo World!</h1>
+      <Navbar />
     </>
   )
 }
