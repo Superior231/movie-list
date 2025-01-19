@@ -12,12 +12,11 @@ export default function Carousel() {
                 pagination={{ clickable: true }}
                 modules={[Autoplay, Pagination]}
             >
-                <SwiperSlide>
-                    <img src="/src/assets/img/img1.jpg" alt="Slide 1" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/src/assets/img/img2.webp" alt="Slide 2" />
-                </SwiperSlide>
+                {[1, 2, 3, 4, 5].map(num => (
+                    <SwiperSlide key={num}>
+                        <img src={`/src/assets/img/img${num}.jpg`} alt={`Slide ${num}`} />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );
