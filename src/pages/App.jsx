@@ -1,13 +1,13 @@
 import '../input.css'
 import '../assets/css/style.css'
-import Navbar from '../components/navbar'
-import Carousel from '../components/Carousel'
+import Content from '../layouts/Content'
+import Header from '../layouts/Header'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Carousel />
+      <Header />
+      <Content />
     </>
   )
 }
