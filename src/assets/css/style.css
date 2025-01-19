@@ -46,36 +46,40 @@ body {
 
 /* Colors */
 a {
-    color: var(--primary-color) !important;
+    color: var(--primary-color);
 }
 .primary-color {
-    color: var(--primary-color) !important;
+    color: var(--primary-color);
 }
 .text-color,
 label {
-    color: var(--text-color) !important;
+    color: var(--text-color);
 }
 .btn-primary {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-color {
+    background-color: var(--card-color);
+    border-color: var(--card-color);
 }
 .bg-primary {
-    background-color: var(--primary-color) !important;
+    background-color: var(--primary-color);
 }
 .bg-color {
-    background-color: var(--background-color) !important;
+    background-color: var(--background-color);
 }
 .bg-secondary {
-    background-color: var(--secondary-color) !important;
+    background-color: var(--secondary-color);
 }
 .border-primary {
-    border-color: var(--primary-color) !important;
+    border-color: var(--primary-color);
 }
 .bg-modal {
-    background-color: var(--nav-color) !important;
+    background-color: var(--nav-color);
 }
 .btn-close {
-    border-color: var(--text-color) !important;
+    border-color: var(--text-color);
 }
 /* Colors End */
 
@@ -101,7 +105,7 @@ h6,
 a,
 span,
 p {
-    font-size: clamp(13px, 2.5vw, 15px) !important;
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 /* Text Size End */
 
