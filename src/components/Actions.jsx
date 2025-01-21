@@ -2,7 +2,7 @@ import Type from "./Type";
 
 export default function Actions() {
   return (
-    <div className="actions flex justify-between align-middle w-full">
+    <div className="actions flex justify-between align-middle w-full mt-5">
         <div className="type flex gap-2">
             {[ 'Movie', 'Series', 'Episode' ].map((item) => (
                 <Type key={item} type={item} />
