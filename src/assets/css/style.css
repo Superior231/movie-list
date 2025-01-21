@@ -168,6 +168,8 @@ nav .search-box.active input {
     nav .search-box.active {
         width: 100%;
         transition: var(--tran-03);
+        border-color: transparent;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 1);
     }
     nav .search-box.active:focus-within {
         border-color: var(--input-box-shadow);
@@ -271,19 +273,19 @@ nav .search-box.active input {
     padding: 3px 10px;
     border-radius: 0px 0px 0px 10px;
 }
-.movie-card-img-overlay .type {
+.movie-card-img-overlay .date {
     background-color: var(--body-color);
     color: var(--text-color-primary);
     padding: 5px 15px 0px 10px;
     position: absolute;
     bottom: 0;
     border-radius: 0px 10px 0px 0px;
-    font-size: clamp(7px, 2.5vw, 15px);
+    font-size: clamp(10px, 2.5vw, 15px) !important;
     font-weight: 600;
     z-index: 200;
 }
 .movie-card-footer .title {
-    font-size: clamp(12px, 2.5vw, 22px);
+    font-size: clamp(12px, 2.5vw, 22px) !important;
     font-weight: 500;
     display: -webkit-box;
     -webkit-line-clamp: 2;
