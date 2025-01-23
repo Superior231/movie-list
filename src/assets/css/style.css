@@ -48,6 +48,9 @@ body {
 a {
     color: var(--primary-color);
 }
+hr {
+    border-color: var(--text-color-muted);
+}
 .primary-color {
     color: var(--primary-color);
 }
@@ -282,9 +285,10 @@ nav .search-box.active input {
     border-radius: 0px 10px 0px 0px;
     font-size: clamp(10px, 2.5vw, 15px) !important;
     font-weight: 600;
-    z-index: 200;
+    z-index: 2;
 }
-.movie-card-footer .title {
+.movie-card-footer .title,
+.card-movie-result-footer .title {
     font-size: clamp(12px, 2.5vw, 22px) !important;
     font-weight: 500;
     display: -webkit-box;
@@ -293,4 +297,91 @@ nav .search-box.active input {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+
+/* card movie results */
+.card-movie-result-container {
+    display: flex;
+    flex-direction: column;
+}
+.card-movie-result-container a {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card-movie-result-container a .card-movie-result-header {
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    width: 50px;
+    height: 100%;
+    border-radius: 10px;
+}
+.card-movie-result-container a .card-movie-result-header img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 12/16;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    transition: var(--tran-03);
+}
+.card-movie-result-container a:hover .card-movie-result-header img {
+    transform: scale(1.1);
+    transition: var(--tran-03);
+}
+.card-movie-result-container a .card-movie-result-footer {
+    margin-left: 60px;
+}
+.card-movie-result-container a .card-movie-result-footer .title,
+.card-movie-result-container a .card-movie-result-footer .genre {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-movie-result-container a .card-movie-result-footer .genre,
+.card-movie-result-container a .card-movie-result-footer .rate {
+    color: var(--text-color-muted);
+}
 /* Card Movie End */
+
+
+
+/* Modal Results */
+.modal-result-container .modal-result {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    max-width: 800px;
+    max-height: calc(100% - 200px);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+/* Modal Results End */
+
+
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color-opacity);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--card-hover);
+}
+/* Scrollbar End */
