@@ -39,7 +39,7 @@ export default function Navbar() {
                         href="/"
                         className={`logo flex items-center gap-2 ${isActive ? "active" : ""}`}
                     >
-                        <img src="/public/icon.png" alt="logo" style={{ width: "30px" }} />
+                        <img src="/icon.png" alt="logo" style={{ width: "30px" }} />
                         <h4 className="font-bold text-color">Movie List</h4>
                     </a>
                     <Search
