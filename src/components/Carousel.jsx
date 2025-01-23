@@ -14,7 +14,7 @@ export default function Carousel() {
             >
                 {[1, 2, 3, 4, 5].map(num => (
                     <SwiperSlide key={num}>
-                        <img src={`/src/assets/img/img${num}.jpg`} alt={`Slide ${num}`} />
+                        <img src={`/public/img${num}.jpg`} alt={`Slide ${num}`} />
                     </SwiperSlide>
                 ))}
             </Swiper>
