@@ -3,10 +3,11 @@ import axios from "axios";
 
 export async function getPopularMovieList() {
   try {
-    const baseUrl  = import.meta.env.VITE_BASEURL
+    const baseUrl = import.meta.env.VITE_BASEURL
     const response = await axios.get(`${baseUrl}/movie/popular`, {
       params: {
         api_key: import.meta.env.VITE_APIKEY,
+        page: 1,
       },
     });
     return response.data.results;
@@ -22,6 +23,7 @@ export async function searchMovie(query) {
       params: {
         api_key: import.meta.env.VITE_APIKEY,
         query,
+        page: 1,
       },
     });
     return response.data.results;
