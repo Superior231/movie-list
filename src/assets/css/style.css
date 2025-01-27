@@ -367,21 +367,3 @@ nav .search-box.active input {
     overflow-x: hidden;
 }
 /* Modal Results End */
-
-
-
-
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: transparent;
-}
-::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color-opacity);
-    border-radius: 6px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--card-hover);
-}
-/* Scrollbar End */

@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import CardResult from "./CardResult";
 
-/* eslint-disable react/prop-types */
 export default function Results({ results, isActive, handleToggle }) {
     return (
         isActive && (
@@ -12,7 +12,7 @@ export default function Results({ results, isActive, handleToggle }) {
                     </div>
                     <div className="modal-body mt-5">
                         {results.length >= 2 ? (
-                            <CardResult results={results} />
+                            <CardResult results={results} handleToggle={handleToggle} />
                         ) : (
                             <p className="mt-5 text-center">No results found.</p>
                         )}

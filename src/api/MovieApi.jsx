@@ -32,3 +32,17 @@ export async function searchMovie(query) {
     throw error;
   }
 }
+
+export async function getMovieDetails(movieId) {
+  try {
+    const response = await axios.get(`${import.meta.env.VITE_BASEURL}/movie/${movieId}`, {
+      params: {
+        api_key: import.meta.env.VITE_APIKEY,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching movie details:", error);
+    throw error;
+  }
+}

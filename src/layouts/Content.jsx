@@ -5,7 +5,7 @@ import Card from "../components/Card";
 export default function Content({ movies, error }) {
   return (
     <div className="container mx-auto px-4 py-5 w-full">
-      <Actions />
+      {/* <Actions /> */}
       <Card movies={movies} error={error} />
     </div>
   );
